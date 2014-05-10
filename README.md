@@ -3,10 +3,10 @@ Django
 
 This repository will be removed as soon as the project is finished.. it is meant as a working environment for the EPITA 2014 RIP project. 
 
-Settings
+Getting started
 --------
 
-To make this project work you need to do the following
+To get started with this project work you need to do the following
 
 1. Install **python 2.7** on your computer
 2. Install **pip**
@@ -39,7 +39,7 @@ part of the program it test (e.g **test_model**, **test_view**).
 
 All apps contain a folder called **static**. This is for static files such as **CSS**, **JavaScript**, **Images** etc. However, they need to be placed inside another folder with the same name as the app itself. I have added such a folder already. If custom CSS is needed it would then have to be placed inside a folder called **css**. 
 
-All **HTML **files will need to be put inside the **templates folder**, also included in all apps. If any of the html folders are used as templates, they should be included in a folder called **_layouts** inside **templates**. 
+All **HTML** files will need to be put inside the **templates folder**, also included in all apps. If any of the html folders are used as templates, they should be included in a folder called **_layouts** inside **templates**. 
 
 For specific information about django, most can be found on djangos website: 
 https://docs.djangoproject.com/en/1.6/contents
