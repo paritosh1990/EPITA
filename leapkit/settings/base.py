@@ -44,19 +44,20 @@ DJANGO_APPS = (
 )
 
 LOCAL_APPS = (
-    '',
+    'root',
+    'admin',
+    'companies',
+    'students',
 )
 
 
 THIRD_PARTY_APPS = (
     'south',
-    'jquery',
     'coverage',
-    'bootstrap3',
-
+    'selenium',
 )
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS+ THIRD_PARTY_APPS  + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'leapkit.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '',
+        'NAME': 'db.sqlite3',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',

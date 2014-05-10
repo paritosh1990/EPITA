@@ -32,6 +32,8 @@ The file structure inside your virtual environment should look like this
 |	|   +-- templates
 |	|   +-- tests
 |   +-- leapkit
+|	|   +-- templates
+|   +-- root
 |	|   +-- static
 |	|   +-- templates
 |	|   +-- tests
