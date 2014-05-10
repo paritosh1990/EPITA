@@ -19,7 +19,7 @@ To get started with this project work you need to do the following
 
 The file structure should look like this
 
-.
+<pre>
 +-- bin
 +-- include
 +-- leapkit
@@ -44,7 +44,7 @@ The file structure should look like this
 |   +-- README.md
 |   +-- requirements.txt
 +-- lib
-
+</pre>
 
 Database
 --------
