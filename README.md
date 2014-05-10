@@ -17,6 +17,34 @@ To get started with this project work you need to do the following
 7. Start git, and pull everything from this repository
 8. Write: **pip install -r requirements.txt** to install all the needed external apps
 
+The file structure should look like this
+
+.
++-- bin
++-- include
++-- leapkit
+|   +-- admin
+|	|   +-- static
+|	|   +-- templates
+|	|   +-- tests
+|   +-- companies
+|	|   +-- static
+|	|   +-- templates
+|	|   +-- tests
+|   +-- leapkit
+|	|   +-- static
+|	|   +-- templates
+|	|   +-- tests
+|   +-- students
+|	|   +-- static
+|	|   +-- templates
+|	|   +-- tests
+|   +-- .gitignore
+|   +-- manage.py
+|   +-- README.md
+|   +-- requirements.txt
++-- lib
+
 
 Database
 --------
