@@ -17,7 +17,7 @@ To get started with this project work you need to do the following
 7. Start git, and pull everything from this repository
 8. Write: **pip install -r requirements.txt** to install all the needed external apps
 
-The file structure should look like this
+The file structure inside your virtual environment should look like this
 
 <pre>
 +-- bin
