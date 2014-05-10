@@ -14,8 +14,8 @@ To make this project work you need to do the following
 4. Create a virtual environment
 5. Start a project with the code: **django-admin.py startproject choose-a-name**
 6. Go into this new folder and delete all files created
-7. start git, and pull everything from this repository
-8. write: **pip install -r requirements.txt** to install all the needed external apps
+7. Start git, and pull everything from this repository
+8. Write: **pip install -r requirements.txt** to install all the needed external apps
 
 
 Database
@@ -37,6 +37,10 @@ Bootstrap and JQuery is installed as apps, because it makes it easier to allow t
 In all apps there is a test directory, all test made should be put into this directory and be named "test_" + name of the 
 part of the program it test (e.g **test_model**, **test_view**).
 
+All apps contain a folder called **static**. This is for static files such as **CSS**, **JavaScript**, **Images** etc. However, they need to be placed inside another folder with the same name as the app itself. I have added such a folder already. If custom CSS is needed it would then have to be placed inside a folder called **css**. 
+
+All **HTML **files will need to be put inside the **templates folder**, also included in all apps. If any of the html folders are used as templates, they should be included in a folder called **_layouts** inside **templates**. 
+
 For specific information about django, most can be found on djangos website: 
 https://docs.djangoproject.com/en/1.6/contents
 
@@ -50,4 +54,4 @@ Commands that are good to know
 6. **python manage.py test --settings=leapkit.settings.testing** (to make sure to use the settings defined in testing.py)
 6. **coverage run manage.py test** (better way to run tests)
 7. **coverage report** (To create a report showing how much of the program your tests covers)
-8. **coverage html** (to create a html sites that show which parts of your code is tested and which parts that still need to be tests)
+8. **coverage html** (to create a html site showing which parts of your code is tested and which parts that still need to be tests)
