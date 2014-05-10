@@ -45,11 +45,10 @@ For specific information about django, most can be found on djangos website:
 https://docs.djangoproject.com/en/1.6/contents
 
 Selenium is installed and can be used for testing, for more information and tutorials, here are some links:
-http://lincolnloop.com/blog/introduction-django-selenium-testing/
 
-http://blog.wercker.com/2013/11/28/django-selenium.html
-
-http://www.realpython.com/blog/python/django-1-6-test-driven-development/
+1. http://lincolnloop.com/blog/introduction-django-selenium-testing/
+2. http://blog.wercker.com/2013/11/28/django-selenium.html
+3. http://www.realpython.com/blog/python/django-1-6-test-driven-development/
 
 Commands that are good to know
 -------------------------------
