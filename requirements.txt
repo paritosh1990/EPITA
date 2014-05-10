@@ -1,0 +1,7 @@
+Django==1.6.4
+South==0.8.4
+django-bootstrap3==4.4.0
+django-jquery==1.9.1
+gunicorn==18.0
+dj-database-url==0.3.0
+psycopg2==2.5.2
