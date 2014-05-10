@@ -13,7 +13,7 @@ To get started with this project work you need to do the following
 3. Install **virtualenv**
 4. Create a virtual environment
 5. Start a project with the code: **django-admin.py startproject choose-a-name**
-6. Go into this new folder and delete all files created
+6. Go into this new folder and delete the folder with the name you just chose
 7. Start git, and pull everything from this repository
 8. Write: **pip install -r requirements.txt** to install all the needed external apps
 
