@@ -6,7 +6,8 @@ This repository will be removed as soon as the project is finished.. it is meant
 Settings
 --------
 
-To make this project work you need to do the following \n
+To make this project work you need to do the following
+
 1. Install python 2.7 on your computer
 2. Install pip
 3. Install virtualenv
@@ -31,13 +32,13 @@ Password:	   |test
 Important Information
 ---------------------
 
-Bootstrap and JQuery is installed as apps, because it makes it easier to allow their usage in all parts of the websites. \n
+Bootstrap and JQuery is installed as apps, because it makes it easier to allow their usage in all parts of the websites.
 
 In all apps there is a test directory, all test made should be put into this directory and be named "test_" + name of the 
-part of the program it test (model, view etc.). \n
+part of the program it test (model, view etc.).
 
 For specific information about django, most can be found on djangos website: 
-https://docs.djangoproject.com/en/1.6/contents/
+https://docs.djangoproject.com/en/1.6/contents
 
 Commands that are good to know
 -------------------------------
