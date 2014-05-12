@@ -11,7 +11,7 @@ To get started with this project work you need to do the following
 1. Install **python 2.7** on your computer
 2. Install **pip**
 3. Install **virtualenv**
-4. Create a virtual environment
+4. Create a virtual environment: **virtualenv epita-venv**
 5. Start a project with the code: **django-admin.py startproject choose-a-name**
 6. Go into this new folder and delete the folder with the name you just chose
 7. Start git, and pull everything from this repository
