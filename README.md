@@ -135,7 +135,9 @@ Selenium is installed and can be used for testing, for more information and tuto
 6. Quickpay
 7. WorldPay
 
-I personally have only heard good things about **BrainTree**, and there is no cost for the first 50.000$ the company makes.
+I personally have only heard good things about **Braintree**, and there is no cost for the first 50.000$ the company makes.
+
+https://www.braintreepayments.com/docs/python/guide/overview (Working with Braintree in Python)
 
 
 
