@@ -21,3 +21,23 @@
 	<script type="text/javascript" src="{% static 'root/js/plugin.js'  %}"></script>
 {% endblock %}
 
+
+ {% block nav_left %}
+
+	<li class="{% block left_first %} {% endblock %}"><a href="{% url 'home' %}">Home</a></li>
+	<li class="dropdown {% block left_second %} {% endblock %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Leapkit for <b class="caret"> </b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'root:student' %}">Students</a></li>
+            <li><a href="{% url 'root:company' %}">Companies</a></li>
+            <li><a href="{% url 'root:university' %}">Universities</a></li>
+          </ul>
+        </li>
+  	<li class="{% block left_third %} {% endblock %}"><a href="{% url 'root:start' %}">Get started</a></li>
+ {% endblock %}
+
+ {% block nav_right %}
+	<li class="{% block right_first %} {% endblock %}"><a href="{% url 'root:about' %}">About Leapkit</a></li>
+	<li class="{% block right_second %} {% endblock %}"><a href="{% url 'root:FAQ' %}">FAQ</a></li>
+ 	<li class="{% block right_third %} {% endblock %}"><a href="{% url 'root:contact' %}">Contact</a></li>
+ {% endblock %}
