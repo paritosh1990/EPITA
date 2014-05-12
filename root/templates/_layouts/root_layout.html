@@ -1,0 +1,23 @@
+{% extends "base/base_generic.html" %}
+{% comment %}
+	# This root template is meant for creating the basic layout for all views that can be viewed without logging in.
+	#
+	#
+	#
+	#
+	#
+{% endcomment %}
+
+{% load staticfiles %}
+
+{% block css_files %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'root/css/style.css'  %}">
+
+{% endblock %}
+
+{% block js_files %} 
+	<script type="text/javascript" src="{% static 'root/js/main.js'  %}"></script>
+	<script type="text/javascript" src="{% static 'root/js/plugin.js'  %}"></script>
+{% endblock %}
+

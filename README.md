@@ -89,6 +89,10 @@ Selenium is installed and can be used for testing, for more information and tuto
 In the template folder of each app, there is a folder called _layout. In this there will be a base template for all views in the given app. I recommend that all CSS files and JS files should be loaded from this template. It means that all CSS files and JS files are loaded once, which might cause a loading spike once, but it is faster than loaded a new file in every template. On top of this, it will enable us to use some cool JavaScript that makes the website look more responsive, by starting the loading process as soon as the mouse hovers over a link. (http://www.instantclick.io)
 
 
+## Information sources
+
+1. https://docs.djangoproject.com/en/1.6/topics/templates/ (Information about how to design flexible templates)
+
 Commands that are good to know
 -------------------------------
 

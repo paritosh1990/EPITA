@@ -1,8 +1,7 @@
 <head>
-	{% load bootstrap3 %}
-	{% bootstrap_css %}
 	{% load staticfiles %}
 	
+	<link rel="stylesheet" type="text/css" href="{% static 'root/css/bootstrap/bootstrap.min.css'  %}">
 	{% block css_files %} {% endblock %}
 
 	<title>{% block title %} {% endblock %} | LeapKit</title>
@@ -47,7 +46,9 @@
 		</footer>
 
 	</div>
-	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js" />
+	<script type="text/javascript" src="{% static 'root/js/jquery-1.11.1.min.js'  %}"></script>
+	<script type="text/javascript" src="{% static 'root/js/bootstrap/bootstrap.min.js'  %}"></script>
+	<script type="text/javascript" src="{% static 'root/js/instantclick.min.js'  %}"></script>
 	{% block js_files %} {% endblock %}
-	{% bootstrap_javascript %}
+	
 </body>
