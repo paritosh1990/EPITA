@@ -105,8 +105,8 @@ Commands that are good to know
 
 1. **git init** (to create a git repository)
 2. **git remote add origin https://github.com/MVilstrup/EPITA.git** (To add the remote branch with the name origin)
-3. ** git pull origin ** (To pull all the code from github to your folder)
-4. ** git push -U origin master ** (To push your changes to github, for the first time)
-5. ** git push origin master ** (to push your changes to github the rest of the project)
+3. **git pull origin** (To pull all the code from github to your folder)
+4. **git push -U origin master** (To push your changes to github, for the first time)
+5. **git push origin master** (to push your changes to github the rest of the project)
 
 
