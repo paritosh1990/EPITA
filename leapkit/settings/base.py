@@ -48,6 +48,7 @@ LOCAL_APPS = (
     'admin',
     'companies',
     'students',
+    'projects',
 )
 
 

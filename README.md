@@ -78,20 +78,66 @@ All **HTML** files will need to be put inside the **templates folder**, also inc
 For specific information about django, most can be found on djangos website: 
 https://docs.djangoproject.com/en/1.6/contents
 
+
+### Other notes
+
+In the template folder of each app, there is a folder called _layout. In this there will be a base template for all views in the given app. I recommend that all CSS files and JS files should be loaded from this template. It means that all CSS files and JS files are loaded once, which might cause a loading spike once, but it is faster than loaded a new file in every template. On top of this, it will enable us to use some cool JavaScript that makes the website look more responsive, by starting the loading process as soon as the mouse hovers over a link. (http://www.instantclick.io)
+
+
+### Information sources
+
+#### Working with the views
+
+1. https://docs.djangoproject.com/en/1.6/topics/templates/ (Information about how to design flexible templates)
+2. https://docs.djangoproject.com/en/1.6/topics/http/shortcuts/ (Shortcut functions that makes it easy to do regular tasks)
+3. https://docs.djangoproject.com/en/1.6/topics/class-based-views/ (How to use class based views)
+4. https://docs.djangoproject.com/en/1.6/topics/forms/ (Working with forms in Django)
+5. https://docs.djangoproject.com/en/1.6/topics/pagination/ (Pagination in Django)
+6. https://docs.djangoproject.com/en/1.6/howto/static-files/ (Working with static files)
+
+#### Email
+
+1. https://docs.djangoproject.com/en/1.6/topics/email/ (Sending emails with Django)
+
+#### Login and security
+
+1. https://docs.djangoproject.com/en/1.6/topics/auth/ (User Authentication)
+2. https://docs.djangoproject.com/en/1.6/topics/http/sessions/ (Working with sessions in Django)
+3. https://docs.djangoproject.com/en/1.6/topics/security/ (Security in Django)
+
+#### Working with files
+
+1. https://docs.djangoproject.com/en/1.6/topics/http/file-uploads/ (File uploading)
+2. https://docs.djangoproject.com/en/1.6/topics/files/ (Handle files)
+
+#### Testing in Django
+1. https://docs.djangoproject.com/en/1.6/topics/testing/overview/
+https://docs.djangoproject.com/en/1.6/topics/testing/tools/
+https://docs.djangoproject.com/en/1.6/topics/testing/advanced/
+
 Selenium is installed and can be used for testing, for more information and tutorials, here are some links:
 
 1. http://lincolnloop.com/blog/introduction-django-selenium-testing/
 2. http://blog.wercker.com/2013/11/28/django-selenium.html
 3. http://www.realpython.com/blog/python/django-1-6-test-driven-development/
 
-## Other notes
+#### Multiple languages
 
-In the template folder of each app, there is a folder called _layout. In this there will be a base template for all views in the given app. I recommend that all CSS files and JS files should be loaded from this template. It means that all CSS files and JS files are loaded once, which might cause a loading spike once, but it is faster than loaded a new file in every template. On top of this, it will enable us to use some cool JavaScript that makes the website look more responsive, by starting the loading process as soon as the mouse hovers over a link. (http://www.instantclick.io)
+1. https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#translating-url-patterns (Best practises for multiple languages)
+
+### Payment systems that work in Denmark
+
+1. 2Checkout
+2. Authorize.net
+3. Braintree
+4. ePay
+5. PAYMILL
+6. Quickpay
+7. WorldPay
+
+I personally have only heard good things about BrainTree, and there is no cost for the first 50.000$ the company makes.
 
 
-## Information sources
-
-1. https://docs.djangoproject.com/en/1.6/topics/templates/ (Information about how to design flexible templates)
 
 Commands that are good to know
 -------------------------------
