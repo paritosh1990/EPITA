@@ -33,6 +33,10 @@ The file structure inside your virtual environment should look like this
 |	|   +-- tests
 |   +-- leapkit
 |	|   +-- templates
+|   +-- projects
+|	|   +-- static
+|	|   +-- templates
+|	|   +-- tests
 |   +-- root
 |	|   +-- static
 |	|   +-- templates
@@ -80,6 +84,11 @@ Selenium is installed and can be used for testing, for more information and tuto
 2. http://blog.wercker.com/2013/11/28/django-selenium.html
 3. http://www.realpython.com/blog/python/django-1-6-test-driven-development/
 
+## Other notes
+
+In the template folder of each app, there is a folder called _layout. In this there will be a base template for all views in the given app. I recommend that all CSS files and JS files should be loaded from this template. It means that all CSS files and JS files are loaded once, which might cause a loading spike once, but it is faster than loaded a new file in every template. On top of this, it will enable us to use some cool JavaScript that makes the website look more responsive, by starting the loading process as soon as the mouse hovers over a link. (http://www.instantclick.io)
+
+
 Commands that are good to know
 -------------------------------
 
@@ -91,3 +100,13 @@ Commands that are good to know
 6. **coverage run manage.py test** (better way to run tests)
 7. **coverage report** (To create a report showing how much of the program your tests covers)
 8. **coverage html** (to create a html site showing which parts of your code is tested and which parts that still need to be tests)
+
+## Git Commands
+
+1. **git init** (to create a git repository)
+2. **git remote add origin https://github.com/MVilstrup/EPITA.git** (To add the remote branch with the name origin)
+3. ** git pull origin ** (To pull all the code from github to your folder)
+4. ** git push -U origin master ** (To push your changes to github, for the first time)
+5. ** git push origin master ** (to push your changes to github the rest of the project)
+
+
