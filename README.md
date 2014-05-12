@@ -12,8 +12,8 @@ To get started with this project work you need to do the following
 2. Install **pip**
 3. Install **virtualenv**
 4. Create a virtual environment: **virtualenv epita-venv**
-5. Start a project with the code: **django-admin.py startproject choose-a-name**
-6. Go into this new folder and delete the folder with the name you just chose
+5. Start a project with the code: **django-admin.py startproject choose-a-name** (e.g leapkit)
+6. Go into this new folder and delete the folder with the name you just chose (e.g leapkit)
 7. Start git, and pull everything from this repository
 8. Write: **pip install -r requirements.txt** to install all the needed external apps
 
