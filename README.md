@@ -1,7 +1,7 @@
 Django
 ======
 
-This repository will be removed as soon as the project is finished.. it is meant as a working environment for the EPITA 2014 RIP project. 
+This repository is meant as a working environment for the EPITA 2014 RIP project. 
 
 Getting started
 --------
