@@ -129,13 +129,13 @@ Selenium is installed and can be used for testing, for more information and tuto
 
 1. 2Checkout
 2. Authorize.net
-3. Braintree
+3. **Braintree**
 4. ePay
 5. PAYMILL
 6. Quickpay
 7. WorldPay
 
-I personally have only heard good things about BrainTree, and there is no cost for the first 50.000$ the company makes.
+I personally have only heard good things about **BrainTree**, and there is no cost for the first 50.000$ the company makes.
 
 
 
