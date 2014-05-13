@@ -26,11 +26,11 @@
 
  {% block nav_right %}
  	<li class="dropdown {% block right_first %} {% endblock %}">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Leapkit for <b class="caret"> </b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"> </b></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'student_info' %}">Students</a></li>
-            <li><a href="{% url 'company_info' %}">Companies</a></li>
-            <li><a href="{% url 'university_info' %}">Universities</a></li>
+            <li><a href="{% url 'student_info' %}">Leapkit for Students</a></li>
+            <li><a href="{% url 'company_info' %}">Leapkit for Companies</a></li>
+            <li><a href="{% url 'university_info' %}">Leapkit for Universities</a></li>
           </ul>
     </li>
     <li class="dropdown {% block right_second %} {% endblock %}">
