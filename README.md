@@ -125,6 +125,13 @@ Selenium is installed and can be used for testing, for more information and tuto
 
 1. https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#translating-url-patterns (Best practises for multiple languages)
 
+#### Comments 
+1. https://code.djangoproject.com/wiki/UsingFreeComment (Django's build in comment library)
+
+
+#### Searching
+1. http://haystacksearch.org
+
 ### Payment systems that work in Denmark
 
 1. 2Checkout
