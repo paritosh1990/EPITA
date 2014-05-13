@@ -3,9 +3,15 @@
 	margin-top: 20px;
 }
 
+#instantclick-bar {
+  background: #D04E28;
+}
+
+
 @media only screen and (min-width : 768px) {
     /* Make Navigation Toggle on Desktop Hover */
     .dropdown:hover .dropdown-menu {
         display: block;
     }
 }
+
