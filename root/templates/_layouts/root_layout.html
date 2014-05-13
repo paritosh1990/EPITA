@@ -1,10 +1,7 @@
 {% extends "base/base_generic.html" %}
 {% comment %}
 	# This root template is meant for creating the basic layout for all views that can be viewed without logging in.
-	#
-	#
-	#
-	#
+	# It manages all the links in the navigation section, and loads all CSS and JavaScript needed.
 	#
 {% endcomment %}
 
@@ -21,6 +18,7 @@
 	<script type="text/javascript" src="{% static 'root/js/plugin.js'  %}"></script>
 {% endblock %}
 
+{% block home_logo %} {% url 'home' %}{% endblock %}
 
  {% block nav_left %}
 

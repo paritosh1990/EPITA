@@ -23,7 +23,7 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 				      	</button>
-				      	<a class="navbar-brand" href="{% url 'home' %}">Leapkit</a>
+				      	<a class="navbar-brand" href="{% block home_logo %} {% endblock %}">Leapkit</a>
 				    </div>
 
 				    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,6 +52,7 @@
 	<script type="text/javascript" src="{% static 'root/js/jquery-1.11.1.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/bootstrap/bootstrap.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/instantclick.min.js'  %}"></script>
+	<script data-no-instant>InstantClick.init();</script>
 	{% block js_files %} {% endblock %}
 	
 </body>
