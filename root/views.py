@@ -3,28 +3,30 @@ from django.http 				import HttpResponseRedirect
 from django.core.urlresolvers 	import reverse
 from django.views 				import generic
 from django.utils 				import timezone
-from django.views.generic import TemplateView
 
-class HomepageView(TemplateView):
+from .models import Question
+
+class HomepageView(generic.TemplateView):
 	template_name = "index.html"
 
-class StudentInfoView(TemplateView):
+class StudentInfoView(generic.TemplateView):
 	template_name = "students.html"
 
-class CompanyInfoView(TemplateView):
+class CompanyInfoView(generic.TemplateView):
 	template_name = "companies.html"
 
-class UniversityInfoView(TemplateView):
+class UniversityInfoView(generic.TemplateView):
 	template_name = "universities.html"
 
-class GetStartedView(TemplateView):
+class GetStartedView(generic.TemplateView):
 	template_name = "get_started.html"
 
-class AboutLeapkitView(TemplateView):
+class AboutLeapkitView(generic.TemplateView):
 	template_name = "about.html"
 
-class FAQView(TemplateView):
+class FAQView(generic.ListView):
+	model = Question
 	template_name = "FAQ.html"
 
-class ContactLeapView(TemplateView):
+class ContactLeapView(generic.TemplateView):
 	template_name = "contact.html"

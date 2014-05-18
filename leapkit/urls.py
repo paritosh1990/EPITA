@@ -1,6 +1,9 @@
 from django.conf.urls import patterns, include, url
+from django.contrib import admin
 
 from root import views
+
+admin.autodiscover()
 
 urlpatterns = patterns('',
     
@@ -17,5 +20,5 @@ urlpatterns = patterns('',
     #All other URLs are stored in their respective app.
     url(r'^students/', include('students.urls', namespace="students")),
     url(r'^companies/', include('companies.urls', namespace="companies")),
-    url(r'^admin/', include('admin.urls', namespace="admin")),
+    url(r'^admin/', include(admin.site.urls)),
 )
