@@ -45,7 +45,6 @@ DJANGO_APPS = (
 
 LOCAL_APPS = (
     'root',
-    'admin',
     'companies',
     'students',
     'projects',

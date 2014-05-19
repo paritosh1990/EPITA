@@ -56,4 +56,6 @@ docs/_build/
 leapkit/settings/local.py
 
 .DS_Store
+htmlcov/
+db.sqlite3
 
