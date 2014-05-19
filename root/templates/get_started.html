@@ -14,5 +14,33 @@
 
 {% block content %}
 
+<div class="row">
+	<div class="col-md-4">
+		<a href="{% url 'student_info' %}">
+				<div class="student_info_button">
+				<h2> Student </h2>
+				<p> This is what leapkit can do for you </p>
+			</div>
+		</a>
+	</div>
+	<div class="col-md-4">
+		<a href="{% url 'company_info' %}">
+			<div class="company_info_button">
+				<h2> Company </h2>
+				<p> This is what leapket can do for you </p>
+			</div>
+		</a>
+	</div>
+	<div class="col-md-4">
+		<a href="{% url 'university_info' %}">
+			<div class="university_info_button">
+				<h2> University </h2>
+				<p> This is what leapket can do for you </p>
+			</div>
+		</a>
+	</div>	
+</div>
+
+      
 
 {% endblock %}

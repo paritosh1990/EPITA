@@ -1,0 +1,16 @@
+
+a .company_info_button, a .student_info_button, a .university_info_button {
+	color: #333;
+	text-decoration: none;
+}
+
+.company_info_button, .student_info_button, .university_info_button {
+	text-align: center;
+	border: 1px solid #333;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.company_info_button:hover, .student_info_button:hover, .university_info_button:hover  {
+	background-color: #999;
+}
