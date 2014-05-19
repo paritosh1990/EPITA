@@ -23,10 +23,6 @@ The file structure inside your virtual environment should look like this
 +-- bin
 +-- include
 +-- leapkit
-|   +-- admin
-|	|   +-- static
-|	|   +-- templates
-|	|   +-- tests
 |   +-- companies
 |	|   +-- static
 |	|   +-- templates
