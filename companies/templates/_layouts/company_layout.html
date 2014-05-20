@@ -1,0 +1,28 @@
+{% extends "base/base_generic.html" %}
+{% comment %}
+	# This root template is meant for creating the basic layout for all views that can be viewed without logging in.
+	# It manages all the links in the navigation section, and loads all CSS and JavaScript needed.
+	#
+{% endcomment %}
+
+{% load staticfiles %}
+
+{% block css_files %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'companies/css/companies.css'  %}">
+
+{% endblock %}
+
+{% block js_files %} 
+
+{% endblock %}
+
+{% block home_logo %} {% url 'companies:profile' %}{% endblock %}
+
+ {% block nav_left %}
+  	
+ {% endblock %}
+
+ {% block nav_right %}
+
+ {% endblock %}

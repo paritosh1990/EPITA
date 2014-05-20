@@ -1,8 +1,7 @@
 from django.shortcuts 			import get_object_or_404, render
-from django.http 				import HttpResponseRedirect
-from django.core.urlresolvers 	import reverse
+from django.contrib.auth import authenticate, login
 from django.views 				import generic
-from django.utils 				import timezone
+
 
 from .models import Question
 
@@ -30,3 +29,9 @@ class FAQView(generic.ListView):
 
 class ContactLeapView(generic.TemplateView):
 	template_name = "contact.html"
+
+class SignInView(generic.TemplateView):
+	template_name = "signin.html"
+
+class SignUpView(generic.TemplateView):
+	template_name = "signup.html"
