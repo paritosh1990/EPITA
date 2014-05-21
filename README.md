@@ -91,6 +91,15 @@ In the template folder of each app, there is a folder called _layout. In this th
 5. https://docs.djangoproject.com/en/1.6/topics/pagination/ (Pagination in Django)
 6. https://docs.djangoproject.com/en/1.6/howto/static-files/ (Working with static files)
 
+#### Bootstrap design inspiration
+
+1. http://builtwithbootstrap.com/
+2. http://lovebootstrap.com/
+3. http://spyrestudios.com/40-websites-built-with-the-twitter-bootstrap-framework/
+4. http://designgeekz.com/15-best-bootstrap-tools-for-designers/
+5. http://untame.net/2012/09/15-incredible-sites-built-with-twitter-bootstrap/
+
+
 #### Email
 
 1. https://docs.djangoproject.com/en/1.6/topics/email/ (Sending emails with Django)
