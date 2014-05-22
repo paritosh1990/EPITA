@@ -4,7 +4,7 @@ from .models import Question
 
 class QuestionAdmin(admin.ModelAdmin):
 	fieldsets = [
-		(None, 					{'fields': ['question', 'answer', 'subject']}),
+		(None, 	 	{'fields': ['question', 'answer', 'subject']}),
 	]
 
 	list_display 	= ('question', 'answer','subject')

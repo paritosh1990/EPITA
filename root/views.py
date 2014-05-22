@@ -1,43 +1,56 @@
-from django.shortcuts 			import get_object_or_404, render
-from django.contrib.auth import authenticate, login
-from django.views 				import generic
+from django.shortcuts 			import get_list_or_404, render
+from django.contrib.auth 		import authenticate, login
+from django.views.generic 		import TemplateView, ListView, CreateView
 
 
-from .models import Question
+from .models import Question, UserQuery
 
-class HomepageView(generic.TemplateView):
+class HomepageView(TemplateView):
 	template_name = "index.html"
 
-class StudentInfoView(generic.TemplateView):
+class StudentInfoView(TemplateView):
 	template_name = "students.html"
 
-class CompanyInfoView(generic.TemplateView):
+class CompanyInfoView(TemplateView):
 	template_name = "companies.html"
 
-class UniversityInfoView(generic.TemplateView):
+class UniversityInfoView(TemplateView):
 	template_name = "universities.html"
 
-class GetStartedView(generic.TemplateView):
+class GetStartedView(TemplateView):
 	template_name = "get_started.html"
 
-class AboutLeapkitView(generic.TemplateView):
+class AboutLeapkitView(TemplateView):
 	template_name = "about.html"
 
-class FAQView(generic.ListView):
+class FAQView(ListView):
 	model = Question
 	template_name = "FAQ.html"
 
-class ContactLeapView(generic.TemplateView):
+class ContactLeapView(CreateView):
+	model = UserQuery
 	template_name = "contact.html"
 
-class SignInView(generic.TemplateView):
+	def form_valid(self, form):
+		#Do custom logic
+
+		return super(ContactLeapView, self).form_valid(form)
+
+	def form_invalid(self, form):
+		#Do custom logic
+
+		return super(ContactLeapView, self).form_invalid(form)
+
+
+
+class SignInView(TemplateView):
 	template_name = "signin.html"
 
-class CompanySignUpView(generic.TemplateView):
+class CompanySignUpView(TemplateView):
 	template_name = "company_signup.html"
 
-class StudentSignUpView(generic.TemplateView):
+class StudentSignUpView(TemplateView):
 	template_name = "student_signup.html"
 
-class SignUpView(generic.TemplateView):
+class SignUpView(TemplateView):
 	template_name = "signup.html"
