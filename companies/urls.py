@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 
-from companies import views 
+from . import views 
 
 urlpatterns = patterns('',
     

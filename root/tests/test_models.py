@@ -1,7 +1,8 @@
 from django.test 					import TestCase
 from django.contrib.auth.models 	import User
 from django.core.urlresolvers 		import reverse
-from root.models 					import Question
+
+from .models 					import Question
 
 
 class QuestionTests(TestCase):

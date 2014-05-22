@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 
 from django.views.generic import TemplateView
 
-from students import views 
+from . import views 
 
 urlpatterns = patterns('',
     

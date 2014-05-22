@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     url(r'FAQ/$', views.FAQView.as_view(), name='FAQ'),
     url(r'contact-lepkit/$', views.ContactLeapView.as_view(), name='contact_leapkit'),
     url(r'signin/$', views.SignInView.as_view(), name='sign_in'),
+    url(r'student_signup/$', views.StudentSignUpView.as_view(), name='student_sign_up'),
+    url(r'company_signup/$', views.CompanySignUpView.as_view(), name='company_sign_up'),
     url(r'signup/$', views.SignUpView.as_view(), name='sign_up'),
     
     #All other URLs are stored in their respective app.

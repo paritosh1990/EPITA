@@ -33,5 +33,11 @@ class ContactLeapView(generic.TemplateView):
 class SignInView(generic.TemplateView):
 	template_name = "signin.html"
 
+class CompanySignUpView(generic.TemplateView):
+	template_name = "company_signup.html"
+
+class StudentSignUpView(generic.TemplateView):
+	template_name = "student_signup.html"
+
 class SignUpView(generic.TemplateView):
 	template_name = "signup.html"
