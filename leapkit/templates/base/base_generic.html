@@ -3,6 +3,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'root/css/bootstrap/bootstrap.min.css'  %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'root/css/global.css'  %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'root/css/quill/quill.snow.css'  %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'root/css/quill/advanced.css'  %}">
 	{% block css_files %} {% endblock %}
 
 	<title>{% block title %} {% endblock %} | LeapKit</title>
@@ -54,6 +56,11 @@
 	<script type="text/javascript" src="{% static 'root/js/jquery-1.11.1.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/bootstrap/bootstrap.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/instantclick.min.js'  %}"></script>
+	<script type="text/javascript" src="{% static 'root/js/validator.js'  %}"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+	<script type="text/javascript" src="{% static 'root/js/quill/quill.min.js'  %}"></script>
+	<script type="text/javascript" src="{% static 'root/js/quill/advanced.js'  %}"></script>
+
 	<script data-no-instant>InstantClick.init();</script>
 	{% block js_files %} {% endblock %}
 	
