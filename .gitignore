@@ -53,9 +53,6 @@ coverage.xml
 docs/_build/
 
 #General project stuff
-leapkit/settings/local.py
-
 .DS_Store
-htmlcov/
-db.sqlite3
+*.sqlite3
 

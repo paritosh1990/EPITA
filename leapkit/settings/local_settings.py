@@ -12,3 +12,7 @@ TEMPLATE_DEBUG = DEBUG
 #         'PORT': '5432',
 #     }
 # }
+
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 25
+INTERNAL_IPS = ('127.0.0.1',)

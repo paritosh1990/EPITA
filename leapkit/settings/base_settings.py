@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-    
+
 DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,7 +118,7 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'collected_static'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -129,4 +129,3 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
-
