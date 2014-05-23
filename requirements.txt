@@ -8,3 +8,6 @@ static==0.4
 wsgiref==0.1.2
 selenium==2.41.0
 Flask==0.10.1
+django-floppyforms==1.1.1
+django-braces==1.4.0
+django-crispy-forms==1.4.0

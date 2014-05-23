@@ -20,18 +20,18 @@
 				<h3 class="text-center"> Contact Leapkit</h3>
 			</div>
 			<div class="row">
-				<form class="form col-md-6 col-md-offset-3" action="" method="post" role="form" data-toggle="validator">
+				<form class="form col-md-8 col-md-offset-2" action="" method="post" role="form" data-toggle="validator">
 				  	<div class="form-group has-feedback">
-				    	<label for="name" class="control-label">First Name</label>
-					    <input type="text" class="form-control" name="name" id="name" placeholder="John" data-error="Please add a valid name" required>
+				    	<label for="name" class="control-label">Name</label>
+					    <input type="text" class="form-control" pattern="[a-zA-ZæøåÆØÅ]+" name="name" id="name" placeholder="John" data-error="Please add a valid name" required>
 			  			<div class="help-block with-errors"></div>
 			  		</div>
 				  	<div class="form-group has-feedback">
 				    	<label for="email" class="control-label">Email address</label>
-					    <input type="email" class="form-control" name="email" id="email" placeholder="John@doe.com" data-error="Please add a valid email" required>
+					    <input type="email" class="form-control" name="email" id="email" placeholder="John@Doe.com" data-error="Please add a valid email" required>
 			  			<div class="help-block with-errors"></div>
 			  		</div>
-		  		
+
 			  		<div class="advanced-wrapper">
 				        <div class="toolbar-container">
 				        	<span class="sc-format-group">
@@ -93,62 +93,64 @@
 					              	<option value="rgb(61, 20, 102)"></option>
 					            </select>
 			            		<span class="sc-format-separator"></span>
-						            <select title="Background Color" class="sc-background">
-						              	<option value="rgb(0, 0, 0)"></option>
-						              	<option value="rgb(230, 0, 0)"></option>
-						              	<option value="rgb(255, 153, 0)"></option>
-						              	<option value="rgb(255, 255, 0)"></option>
-						              	<option value="rgb(0, 138, 0)"></option>
-						              	<option value="rgb(0, 102, 204)"></option>
-						              	<option value="rgb(153, 51, 255)"></option>
-						              	<option value="rgb(255, 255, 255)" selected></option>
-						              	<option value="rgb(250, 204, 204)"></option>
-						              	<option value="rgb(255, 235, 204)"></option>
-						              	<option value="rgb(255, 255, 204)"></option>
-						              	<option value="rgb(204, 232, 204)"></option>
-						              	<option value="rgb(204, 224, 245)"></option>
-						              	<option value="rgb(235, 214, 255)"></option>
-						              	<option value="rgb(187, 187, 187)"></option>
-						              	<option value="rgb(240, 102, 102)"></option>
-						              	<option value="rgb(255, 194, 102)"></option>
-						              	<option value="rgb(255, 255, 102)"></option>
-						              	<option value="rgb(102, 185, 102)"></option>
-						              	<option value="rgb(102, 163, 224)"></option>
-						              	<option value="rgb(194, 133, 255)"></option>
-						              	<option value="rgb(136, 136, 136)"></option>
-						              	<option value="rgb(161, 0, 0)"></option>
-						              	<option value="rgb(178, 107, 0)"></option>
-						              	<option value="rgb(178, 178, 0)"></option>
-						              	<option value="rgb(0, 97, 0)"></option>
-						              	<option value="rgb(0, 71, 178)"></option>
-						              	<option value="rgb(107, 36, 178)"></option>
-						              	<option value="rgb(68, 68, 68)"></option>
-						              	<option value="rgb(92, 0, 0)"></option>
-						              	<option value="rgb(102, 61, 0)"></option>
-						              	<option value="rgb(102, 102, 0)"></option>
-						              	<option value="rgb(0, 55, 0)"></option>
-						              	<option value="rgb(0, 41, 102)"></option>
-						              	<option value="rgb(61, 20, 102)"></option>
-						            </select>
-			            			<span class="sc-format-separator"></span>
-						            <select title="Text Alignment" class="sc-align">
-						              	<option value="left" selected></option>
-						              	<option value="center"></option>
-						              	<option value="right"></option>
-						              	<option value="justify"></option>
-						            </select>
-				            	</span>
-			            		<span class="sc-format-group">
-			            			<span title="Link" class="sc-format-button sc-link"></span>
-			            			<span class="sc-format-separator"></span>
-			            			<span title="Image" class="sc-format-button sc-image"></span>
-			            		</span>
-				            </div>
-				        	<div class="editor-container"></div>
-					    </div>
+					            <select title="Background Color" class="sc-background">
+					              	<option value="rgb(0, 0, 0)"></option>
+					              	<option value="rgb(230, 0, 0)"></option>
+					              	<option value="rgb(255, 153, 0)"></option>
+					              	<option value="rgb(255, 255, 0)"></option>
+					              	<option value="rgb(0, 138, 0)"></option>
+					              	<option value="rgb(0, 102, 204)"></option>
+					              	<option value="rgb(153, 51, 255)"></option>
+					              	<option value="rgb(255, 255, 255)" selected></option>
+					              	<option value="rgb(250, 204, 204)"></option>
+					              	<option value="rgb(255, 235, 204)"></option>
+					              	<option value="rgb(255, 255, 204)"></option>
+					              	<option value="rgb(204, 232, 204)"></option>
+					              	<option value="rgb(204, 224, 245)"></option>
+					              	<option value="rgb(235, 214, 255)"></option>
+					              	<option value="rgb(187, 187, 187)"></option>
+					              	<option value="rgb(240, 102, 102)"></option>
+					              	<option value="rgb(255, 194, 102)"></option>
+					              	<option value="rgb(255, 255, 102)"></option>
+					              	<option value="rgb(102, 185, 102)"></option>
+					              	<option value="rgb(102, 163, 224)"></option>
+					              	<option value="rgb(194, 133, 255)"></option>
+					              	<option value="rgb(136, 136, 136)"></option>
+					              	<option value="rgb(161, 0, 0)"></option>
+					              	<option value="rgb(178, 107, 0)"></option>
+					              	<option value="rgb(178, 178, 0)"></option>
+					              	<option value="rgb(0, 97, 0)"></option>
+					              	<option value="rgb(0, 71, 178)"></option>
+					              	<option value="rgb(107, 36, 178)"></option>
+					              	<option value="rgb(68, 68, 68)"></option>
+					              	<option value="rgb(92, 0, 0)"></option>
+					              	<option value="rgb(102, 61, 0)"></option>
+					              	<option value="rgb(102, 102, 0)"></option>
+					              	<option value="rgb(0, 55, 0)"></option>
+					              	<option value="rgb(0, 41, 102)"></option>
+					              	<option value="rgb(61, 20, 102)"></option>
+					            </select>
+		            			<span class="sc-format-separator"></span>
+					            <select title="Text Alignment" class="sc-align">
+					              	<option value="left" selected></option>
+					              	<option value="center"></option>
+					              	<option value="right"></option>
+					              	<option value="justify"></option>
+					            </select>
+			            	</span>
+		            		<span class="sc-format-group">
+		            			<span title="Link" class="sc-format-button sc-link"></span>
+		            			<span class="sc-format-separator"></span>
+		            			<span title="Image" class="sc-format-button sc-image"></span>
+		            		</span>
+			            </div>
+			        	<div class="editor-container"></div>
+				    </div>
 
-					<button type="submit" class="btn btn-primary btn-block" disabled="disabled">Contact</button>
-				</form>			
+				    <div class="col-md-6  col-md-offset-3">
+				    	<button type="submit" class="btn btn-primary btn-block" disabled="disabled">Contact</button>
+				    </div>
+				</form>
 			</div>
 		</div>
 	</div>
