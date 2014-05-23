@@ -11,3 +11,4 @@ Flask==0.10.1
 django-floppyforms==1.1.1
 django-braces==1.4.0
 django-crispy-forms==1.4.0
+django-haystack==2.1.0
