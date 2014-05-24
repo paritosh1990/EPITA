@@ -3,13 +3,12 @@
 	margin-top: 20px;
 }
 
-
-
-
-
-
 #instantclick-bar {
-  background: #D04E28;
+  background: #FEA246;
+}
+
+a {
+	text-decoration: none !important;
 }
 
 
@@ -17,6 +16,7 @@
     /* Make Navigation Toggle on Desktop Hover */
     .dropdown:hover .dropdown-menu {
         display: block;
+        border-radius: 4px !important;
     }
 }
 

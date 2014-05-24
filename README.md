@@ -1,7 +1,7 @@
 Django
 ======
 
-This repository is meant as a working environment for the EPITA 2014 RIP project. 
+This repository is meant as a working environment for the EPITA 2014 RIP project.
 
 Getting started
 --------
@@ -52,11 +52,11 @@ Database
 --------
 The database is currently SQLlite since this makes it easier to work on on multiple computers
 
-Name           |Value         
+Name           |Value
 :---           |:---:
-User name:     |test           
-Email: 		   |test@test.dk   
-Password:	   |test           
+User name:     |test
+Email: 		   |test@test.dk
+Password:	   |test
 
 
 Important Information
@@ -64,14 +64,14 @@ Important Information
 
 Bootstrap and JQuery is installed as apps, because it makes it easier to allow their usage in all parts of the websites.
 
-In all apps there is a test directory, all test made should be put into this directory and be named "test_" + name of the 
+In all apps there is a test directory, all test made should be put into this directory and be named "test_" + name of the
 part of the program it test (e.g **test_model**, **test_view**).
 
-All apps contain a folder called **static**. This is for static files such as **CSS**, **JavaScript**, **Images** etc. However, they need to be placed inside another folder with the same name as the app itself. I have added such a folder already. If custom CSS is needed it would then have to be placed inside a folder called **css**. 
+All apps contain a folder called **static**. This is for static files such as **CSS**, **JavaScript**, **Images** etc. However, they need to be placed inside another folder with the same name as the app itself. I have added such a folder already. If custom CSS is needed it would then have to be placed inside a folder called **css**.
 
-All **HTML** files will need to be put inside the **templates folder**, also included in all apps. If any of the html folders are used as templates, they should be included in a folder called **_layouts** inside **templates**. 
+All **HTML** files will need to be put inside the **templates folder**, also included in all apps. If any of the html folders are used as templates, they should be included in a folder called **_layouts** inside **templates**.
 
-For specific information about django, most can be found on djangos website: 
+For specific information about django, most can be found on djangos website:
 https://docs.djangoproject.com/en/1.6/contents
 
 
@@ -90,6 +90,17 @@ In the template folder of each app, there is a folder called _layout. In this th
 4. https://docs.djangoproject.com/en/1.6/topics/forms/ (Working with forms in Django)
 5. https://docs.djangoproject.com/en/1.6/topics/pagination/ (Pagination in Django)
 6. https://docs.djangoproject.com/en/1.6/howto/static-files/ (Working with static files)
+
+#### Third party libraries used
+
+1. http://django-crispy-forms.readthedocs.org/en/latest/index.html (making it easier to manage forms)
+2. http://django-floppyforms.readthedocs.org/en/latest/ (improving form layout)
+3. http://django-braces.readthedocs.org/en/latest/index.html (Making plugin mixing easy)
+4. http://south.readthedocs.org/en/latest/ (Improving database management)
+
+
+1. http://quilljs.com/ (For great styling messages)
+
 
 #### Bootstrap design inspiration
 
@@ -130,7 +141,7 @@ Selenium is installed and can be used for testing, for more information and tuto
 
 1. https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#translating-url-patterns (Best practises for multiple languages)
 
-#### Comments 
+#### Comments
 1. https://code.djangoproject.com/wiki/UsingFreeComment (Django's build in comment library)
 
 

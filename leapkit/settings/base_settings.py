@@ -55,6 +55,9 @@ THIRD_PARTY_APPS = (
     'south',
     'coverage',
     'selenium',
+    'crispy_forms',
+    'braces',
+    'floppyforms',
 )
 
 INSTALLED_APPS = DJANGO_APPS+ THIRD_PARTY_APPS  + LOCAL_APPS
@@ -129,3 +132,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_FAIL_SILENTLY = not DEBUG

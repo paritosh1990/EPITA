@@ -14,7 +14,7 @@
 
 {% endblock %}
 
-{% block js_files %} 
+{% block js_files %}
 	<script type="text/javascript" src="{% static 'root/js/main.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/plugin.js'  %}"></script>
 {% endblock %}
@@ -31,9 +31,9 @@
       <ul class="dropdown-menu">
       	<li><a href="{% url 'about_leapkit' %}">About</a></li>
 	      <li><a href="{% url 'FAQ' %}">FAQ</a></li>
-		    <li><a href="{% url 'contact_leapkit' %}">Contact</a></li>
+		    <li><a href="{% url 'contact_leapkit' %}" data-no-instant>Contact</a></li>
       </ul>
     </li>
-    <li class="divider-vertical"></li>
-    <li class="dropdown {% block sign_in %}{% endblock %}"><a href="{% url 'sign_in' %}">Sign in</a></li>
+
+    <li class="{% block sign_in %}{% endblock %}"><a href="{% url 'sign_in' %}">Sign in</a></li>
  {% endblock %}

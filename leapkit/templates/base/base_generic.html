@@ -17,7 +17,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12 data-instant">
+			<div class="col-md-12">
 				<nav id="nav"class="navbar navbar-default" role="navigation">
 			  		<div class="container-fluid">
 					    <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,6 +45,18 @@
 				</nav>
 			</div>
 		</div>
+		{% if messages %}
+    		{% for message in messages %}
+			    <div class="row">
+			   	 	<div class="col-md-8 col-md-offset-2">
+				   	 	<div id="message_{{ forloop.counter }}" {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+						  	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						  	{{ message }}
+						</div>
+			   	 	</div>
+			    </div>
+		    {% endfor %}
+		{% endif %}
 
 		{% block content %}
 		{% endblock %}
@@ -59,11 +71,7 @@
 	<script type="text/javascript" src="{% static 'root/js/bootstrap/bootstrap.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/instantclick.min.js'  %}"></script>
 	<script type="text/javascript" src="{% static 'root/js/validator.js'  %}"></script>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
-	<script type="text/javascript" src="{% static 'root/js/quill/quill.min.js'  %}"></script>
-	<script type="text/javascript" src="{% static 'root/js/quill/setup.js'  %}"></script>
-
-	<script data-no-instant>InstantClick.init();</script>
+	{#<script data-no-instant>InstantClick.init();</script>#}
 	{% block js_files %} {% endblock %}
 
 </body>

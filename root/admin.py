@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Question
+from .models import Question, UserQuery
 
 class QuestionAdmin(admin.ModelAdmin):
 	fieldsets = [
@@ -12,3 +12,14 @@ class QuestionAdmin(admin.ModelAdmin):
 	list_filter 	= ['subject']
 
 admin.site.register(Question, QuestionAdmin)
+
+class UserQueryAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None, 	 	{'fields': ['name', 'email', 'body']}),
+	]
+
+	list_display 	= ('name', 'email')
+	list_filter 	= ['created']
+
+
+admin.site.register(UserQuery, UserQueryAdmin)
