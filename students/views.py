@@ -1,13 +1,10 @@
-from django.utils.decorators import method_decorator
-from django.contrib.auth.decorators import login_required
-from django.views import generic
+from django.views.generic import TemplateView
+
+from braces.views import LoginRequiredMixin, GroupRequiredMixin
 
 
-class LoginRequiredMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(LoginRequiredMixin, self).dispatch(*args, **kwargs)
-
-
-class StudentProfileView(generic.TemplateView):
+class StudentProfileView(LoginRequiredMixin, GroupRequiredMixin, TemplateView):
+    permission_required = "auth.change_user"
     template_name = "student_profile.html"
+    group_required = u"students"
+    login_url = "/signin/"

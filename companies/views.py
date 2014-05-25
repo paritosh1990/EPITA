@@ -1,6 +1,10 @@
-from django.shortcuts 			import render
-from django.views 				import generic
+from django.views.generic import TemplateView
 
-# Create your views here.
-class CompanyProfileView(generic.TemplateView):
-	template_name = "company_profile.html"
+from braces.views import LoginRequiredMixin, GroupRequiredMixin
+
+
+class CompanyProfileView(LoginRequiredMixin, GroupRequiredMixin, TemplateView):
+    permission_required = "auth.change_user"
+    template_name = "company_profile.html"
+    group_required = u"companies"
+    login_url = "/signin/"
