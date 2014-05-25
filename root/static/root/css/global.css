@@ -1,14 +1,28 @@
 
 .navbar {
 	margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 #instantclick-bar {
   background: #FEA246;
 }
 
+.asteriskField {
+    display: none;
+}
+
 a {
 	text-decoration: none !important;
+}
+
+.icon-bar {
+     background: #FEA246 !important;
+}
+
+.nav_bottom {
+    height: 1px;
+    border-bottom: 2px solid #FEA246;
 }
 
 
