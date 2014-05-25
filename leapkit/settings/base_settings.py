@@ -12,10 +12,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 ##import dj_database_url
 
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
-
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_FAIL_SILENTLY = False
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -133,5 +134,3 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
-CRISPY_FAIL_SILENTLY = not DEBUG

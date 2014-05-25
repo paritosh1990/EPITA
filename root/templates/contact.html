@@ -14,17 +14,20 @@
 
 {% block content %}
 	{% load staticfiles %}
-	<div class="row">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <script type="text/javascript" src="{% static 'root/js/quill/quill.min.js' %}"></script>
+    <div class="row">
 		<div class=" col-md-10 col-md-offset-1">
 			<div class="row">
 				<h3 class="text-center"> Contact Leapkit</h3>
 			</div>
 			<div class="row">
 				<div class="form col-md-8 col-md-offset-2">
-				  	{% load crispy_forms_tags %}
-					{% crispy form  %}
+                    {% load crispy_forms_tags %}
+                    {% crispy form %}
 				</div>
 			</div>
 		</div>
 	</div>
+    <script type="text/javascript" src="{% static 'root/js/quill/setup.js' %}"></script>
 {% endblock %}

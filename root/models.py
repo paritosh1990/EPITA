@@ -16,8 +16,8 @@ class TimeStampedModel(models.Model):
 
 
 class AnswersModel(TimeStampedModel):
-    has_been_answered = models.BooleanField(default=False)
-    answer = models.TextField(default='')
+    has_been_answered = models.BooleanField(blank=True, default=False)
+    answer = models.TextField(blank=True, default='')
 
     class Meta:
         abstract = True
@@ -48,7 +48,7 @@ class Question(TimeStampedModel):
         verbose_name_plural = "Frequently Asked Questions"
 
 
-class UserQuery(TimeStampedModel):
+class UserQuery(AnswersModel):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
     body = models.TextField()

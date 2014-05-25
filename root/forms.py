@@ -1,19 +1,1 @@
-from django import forms
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit, Layout
-
-from .models import UserQuery
-
-
-class ContactForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
-
-        self.helper = FormHelper(self)
-        self.helper.form_method = 'post'
-        self.helper.form_class = 'form-inline'
-        self.helper.add_input(Submit('submit', 'Submit'))
-        self.helper.layout = Layout('name', 'email')
-
-    class Meta:
-        model = UserQuery
+import floppyforms as formsfrom crispy_forms.helper import FormHelperfrom crispy_forms.layout import Layout,Submit, Field, ButtonHolder, Divfrom .models import UserQueryclass ContactForm(forms.ModelForm):    def __init__(self, *args, **kwargs):        super(ContactForm, self).__init__(*args, **kwargs)        self.helper = FormHelper()        self.helper.form_action = 'contact_leapkit'        self.helper.layout = Layout(            Field('name', css_class="cool"),            Field('email', css_class="cool"),            Div(template="layout/quill.html"),            Field('body', type="hidden", id="hiddenBody"),            ButtonHolder(                Submit('submit', 'Contact',css_class="col-md-4 col-md-offset-4")            )        )    class Meta:        model = UserQuery
