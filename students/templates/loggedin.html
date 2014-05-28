@@ -8,10 +8,12 @@
 	#
 {% endcomment %}
 
-{% block title %} Student Profile {% endblock %}
+{% block title %} {{ full_name }} {% endblock %}
 
 {% block content %}
 
-
+    <h1> Hi {{ full_name }} </h1>
+    <h2> You are now logged in</h2>
+    <p> click <a href="{% url 'students:logout' %}">here</a> to logout </p>
 
 {% endblock %}

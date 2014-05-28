@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import  Group
+
 
 from .models import Student
 from .forms import StudentCreationForm, StudentChangeForm
@@ -31,4 +31,3 @@ class StudentAdmin(UserAdmin):
     filter_horizontal = ()
 
 admin.site.register(Student, StudentAdmin)
-admin.site.unregister(Group)

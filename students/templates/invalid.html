@@ -8,10 +8,11 @@
 	#
 {% endcomment %}
 
-{% block title %} Student Profile {% endblock %}
+{% block title %} Invalid login {% endblock %}
 
 {% block content %}
 
-
+    <h1> Your login details are invalid </h1>
+    <p> click <a href="{% url 'students:login' %}">here</a> to try again </p>
 
 {% endblock %}

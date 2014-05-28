@@ -3,6 +3,27 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 
 class StudentManager(BaseUserManager):
+    def create_user(self, email, identifier, first_name, last_name, sex, university, password=None):
+        """
+        Creates and saves a User with the given email, date of
+        birth and password.
+        """
+        if not email:
+            raise ValueError('Users must have an email address')
+
+        user = self.model(
+            email=self.normalize_email(email),
+            identifier=identifier,
+            first_name=first_name,
+            last_name=last_name,
+            sex=sex,
+            university=university,
+        )
+
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
     def create_superuser(self, identifier, first_name, last_name, email, sex, university, password):
         """
         Creates and saves a superuser with the given email, date of
@@ -10,12 +31,12 @@ class StudentManager(BaseUserManager):
         """
         user = self.create_user(
             email,
-            identifier,
-            first_name,
-            last_name,
-            self.normalize_email(email),
-            sex,
-            university,
+            identifier=identifier,
+            first_name=first_name,
+            last_name=last_name,
+            sex=sex,
+            university=university,
+            password=password,
         )
 
         user.save(using=self._db)
@@ -49,8 +70,8 @@ class Student(AbstractBaseUser):
 
     #Student fields
     identifier = models.CharField(max_length=50, unique=True)
-    email = models.EmailField(max_length=100)
-    date_of_birth = models.DateField(blank=True)
+    email = models.EmailField(max_length=100, unique=True)
+    date_of_birth = models.DateField(blank=True, null=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     sex = models.CharField(max_length=3, choices=SEX)
