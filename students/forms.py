@@ -1,10 +1,5 @@
-from django.contrib import admin
-from django.contrib.auth.models import Group
-from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-
-import floppyforms as forms
-from crispy_forms.helper import FormHelper
+from django import forms
 
 from .models import Student
 
@@ -13,13 +8,9 @@ class StudentCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
 
-    def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_action = 'create_student'
-
     class Meta:
         model = Student
+        fields = ('email', 'identifier', 'first_name', 'last_name', 'sex', 'university')
 
     def clean_password2(self):
         # Check that the two password entries match
@@ -45,18 +36,14 @@ class StudentChangeForm(forms.ModelForm):
     """
     password = ReadOnlyPasswordHashField()
 
-    def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_action = 'update_student'
-
     class Meta:
         model = Student
+        fields = ('email', 'password', 'identifier', 'first_name', 'last_name', 'sex', 'university')
 
     def clean_password(self):
         """ Regardless of what the user provides, return the initial value.
         This is done here, rather than on the field, because the
         field does not have access to the initial value
-        assword hash display field.
+        password hash display field.
         """
         return self.initial["password"]

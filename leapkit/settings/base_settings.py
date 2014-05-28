@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 ##import dj_database_url
 
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -59,6 +59,7 @@ THIRD_PARTY_APPS = (
     'crispy_forms',
     'braces',
     'floppyforms',
+    'debug_toolbar',
 )
 
 INSTALLED_APPS = DJANGO_APPS+ THIRD_PARTY_APPS  + LOCAL_APPS
@@ -134,3 +135,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+MEDIA_ROOT = '/media/'
