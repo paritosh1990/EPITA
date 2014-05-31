@@ -137,3 +137,5 @@ ALLOWED_HOSTS = ['*']
 
 MEDIA_ROOT = '/media/'
 
+LOGIN_URL = "/signin/"
+
