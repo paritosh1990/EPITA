@@ -49,6 +49,7 @@ LOCAL_APPS = (
     'companies',
     'students',
     'projects',
+    'users',
 )
 
 
@@ -138,4 +139,8 @@ ALLOWED_HOSTS = ['*']
 MEDIA_ROOT = '/media/'
 
 LOGIN_URL = "/signin/"
+
+# Authentication
+AUTH_USER_MODEL = "users.CustomUser"
+AUTHENTICATION_BACKENDS = ("users.backends.CustomUserAuth",)
 

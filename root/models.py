@@ -4,6 +4,7 @@ from django.db import models
 from django.utils import timezone
 
 
+
 class TimeStampedModel(models.Model):
     """
     An abstract base class model that provides self-updating 'created' and 'modified' fields
@@ -15,15 +16,12 @@ class TimeStampedModel(models.Model):
         abstract = True
 
 
-class AnswersModel(TimeStampedModel):
-    has_been_answered = models.BooleanField(blank=True, default=False)
-    answer = models.TextField(blank=True, default='')
-
-    class Meta:
-        abstract = True
-
-
 class Question(TimeStampedModel):
+    """
+    Question is used to store all the frequently asked questions.
+    It contains the question, an answer to that question along with the section to which the question belongs.
+    The subject can be either Students, Companies or Universities, and are stored as S, C & U.
+    """
     STUDENTS = 'S'
     COMPANIES = 'C'
     UNIVERSITIES = 'U'
@@ -48,15 +46,26 @@ class Question(TimeStampedModel):
         verbose_name_plural = "Frequently Asked Questions"
 
 
-class UserQuery(AnswersModel):
-    name = models.CharField(max_length=200)
+class UserQuery(TimeStampedModel):
+    """
+    UserQuery is used to store the questions users ask Leapkit.
+    It contains the name and email of the user along with the message.
+    It has two fields keeping track of whether the question has been answered, as well as the actual answer.
+    """
+    name = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
     body = models.TextField()
+    has_been_answered = models.BooleanField(blank=True, default=False)
+    answer = models.TextField(blank=True, default='')
 
     def __unicode__(self):
         return self.name
 
     def was_asked_recently(self):
+        """
+        Checks if the query has been created less than 24 hours ago
+        :return: Boolean
+        """
         now = timezone.now()
 
         return now - datetime.timedelta(days=1) <= self.created < now

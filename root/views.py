@@ -107,6 +107,6 @@ def auth_view(request):
         if is_company:
             return HttpResponseRedirect('/companies/')
 
-        return HttpResponseRedirect('/about/')
+        return HttpResponseRedirect('404')
     else:
         return HttpResponseRedirect('leapkit:home')
