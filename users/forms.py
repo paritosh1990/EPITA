@@ -1,4 +1,8 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
+
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 
 from .models import CustomUser
 
@@ -26,3 +30,13 @@ class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
         model = CustomUser
+
+
+class SignInForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(SignInForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_id = 'id-SignInForm'
+        self.helper.form_method = 'post'
+        self.helper.form_action = 'auth_view'
+        self.helper.add_input(Submit('submit', 'Submit'))

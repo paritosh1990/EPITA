@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from root import views
+from users import views as user_view
 
 admin.autodiscover()
 
@@ -24,11 +25,9 @@ urlpatterns = patterns('',
    url(r'contact-leapkit/$', views.ContactLeapkitView.as_view(), name='contact_leapkit'),
    url(r'contact-leapkit/success/$', views.ContactSuccessView.as_view(), name='contact_success'),
 
-   # All urls related to signing in/up
-   url(r'signin/$', views.SignInView.as_view(), name='sign_in'),
-   url(r'auth_view/$', views.auth_view, name='auth_view'),
-   url(r'student_signup/$', views.StudentSignUpView.as_view(), name='student_sign_up'),
-   url(r'company_signup/$', views.CompanySignUpView.as_view(), name='company_sign_up'),
+   # Urls related to signing in/up
+   url(r'sign_in/$', user_view.SignInView.as_view(), name='sign_in'),
+   url(r'auth_view/$', user_view.auth_view, name='auth_view'),
    url(r'signup/$', views.SignUpView.as_view(), name='sign_up'),
 
    # All other URLs are stored in their respective app.
