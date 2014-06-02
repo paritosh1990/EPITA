@@ -6,10 +6,10 @@ from .forms import CompanyCreationForm
 
 
 class CompanyProfileView(LoginRequiredMixin, GroupRequiredMixin, TemplateView):
-    permission_required = "auth.change_user"
     template_name = "company_profile.html"
     group_required = u"Companies"
-    login_url = "/signin/"
+    login_url = "companies:sign_up"
+
 
 class SignUpView(FormView):
     template_name = "company_signup.html"

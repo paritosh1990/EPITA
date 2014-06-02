@@ -6,7 +6,7 @@ from .forms import StudentCreationForm
 
 class StudentProfileView(LoginRequiredMixin, GroupRequiredMixin, TemplateView):
     template_name = "student_profile.html"
-    login_url = "sign_in"
+    login_url = "students:sign_up"
     group_required = u"Students"
 
 
