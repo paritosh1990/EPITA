@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 
+
 class CustomUserManager(BaseUserManager):
     def _create_user(self, email, password, is_staff, is_superuser, **extra_fields):
         """
@@ -90,7 +91,7 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
     slug = models.SlugField(max_length=255, blank=True, default='')
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['user_type',]
+    REQUIRED_FIELDS = ['user_type', ]
 
     objects = CustomUserManager()
 
@@ -114,16 +115,15 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
         """
         return self.name
 
-    def get_url_name(self):
-        url = "%s_%s" % (self.first_name, self.last_name)
-        return url.strip()
 
     @models.permalink
     def get_absolute_url(self):
         if self.user_type == "STU":
-            return "students:profile", (), {"slug": self.slug}
+            return "students:profile", (), {"user": self.id}
         elif self.user_type == "COM":
-            return "companies:profile", (), {"slug": self.slug}
+            return "companies:profile", (), {"user": self.id}
+        else:
+            return "/admin/"
 
     def save(self, *args, **kwargs):
         if not self.name:
@@ -132,6 +132,7 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
             self.slug = slugify(self.name)
 
         super(CustomUser, self).save(*args, **kwargs)
+
 
 def email_user(self, subject, message, from_email=None):
     """

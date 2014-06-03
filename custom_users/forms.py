@@ -2,7 +2,7 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit, Layout, Fieldset, Hidden
+from crispy_forms.layout import Submit, Layout, Fieldset
 
 from .models import CustomUser
 

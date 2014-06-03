@@ -4,9 +4,8 @@ import floppyforms as forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Fieldset
 
-
-from leapkit_users.models import CustomUser
-from leapkit_users.forms import CustomUserCreationForm
+from custom_users.forms import CustomUserCreationForm
+from custom_users.models import CustomUser
 
 
 class StudentCreationForm(CustomUserCreationForm):

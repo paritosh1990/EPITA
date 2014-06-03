@@ -2,7 +2,6 @@ from .models import CustomUser
 
 
 class CustomUserAuth(object):
-
     def authenticate(self, username=None, password=None):
         try:
             user = CustomUser.objects.get(email=username)

@@ -1,26 +1,6 @@
 from django.db import models
 
-from leapkit_users.models import CustomUser
-
-
-class StudentProfileManager(models.Manager):
-    def create_profile(self, user, first_name, last_name, sex, university):
-        """
-        :param user: The owner of the profile
-        :param first_name: The first name of the user
-        :param last_name: The last name of the user
-        :param sex: The sex of the user
-        :param university: The univesity the user is enrolled in
-        :return: profile of the student user
-        """
-        profile = self.create(
-            user=user,
-            first_name=first_name,
-            last_name=last_name,
-            sex=sex,
-            university=university
-        )
-        return profile
+from custom_users.models import CustomUser
 
 
 class StudentProfile(models.Model):
@@ -48,7 +28,7 @@ class StudentProfile(models.Model):
         (FEMALE, "Female"),
     }
 
-    #Student fields
+    # Student fields
     user = models.OneToOneField(CustomUser)
     date_of_birth = models.DateField(blank=True)
     first_name = models.CharField(max_length=100, blank=True)
@@ -59,7 +39,8 @@ class StudentProfile(models.Model):
     modified = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
 
-    objects = StudentProfileManager()
+    def __unicode__(self):
+        return self.user.get_full_name()
 
     class Meta:
         permissions = (
@@ -72,7 +53,7 @@ class StudentProfile(models.Model):
         )
 
     def save(self, *args, **kwargs):
-        self.user.name = "%s %s" % (self.first_name, self.last_name)
-        self.user.save()
+        # self.user.name = "%s %s" % (self.first_name, self.last_name)
+        # self.user.save()
 
         super(StudentProfile, self).save(*args, **kwargs)

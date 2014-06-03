@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-##import dj_database_url
+# #import dj_database_url
 
 DEBUG = False
 
@@ -49,9 +49,8 @@ LOCAL_APPS = (
     'companies',
     'students',
     'projects',
-    'leapkit_users',
+    'custom_users',
 )
-
 
 THIRD_PARTY_APPS = (
     'south',
@@ -63,7 +62,7 @@ THIRD_PARTY_APPS = (
     'debug_toolbar',
 )
 
-INSTALLED_APPS = DJANGO_APPS+ THIRD_PARTY_APPS  + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -83,18 +82,18 @@ WSGI_APPLICATION = 'leapkit.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-        'default': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db.sqlite3',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
         'PORT': '',
-        }
+    }
 }
 
 # DATABASES = {
-#     'default': dj_database_url.config()
+# 'default': dj_database_url.config()
 # }
 
 # Internationalization
@@ -124,8 +123,6 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'collected_static'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -133,15 +130,11 @@ STATICFILES_DIRS = (
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-MEDIA_ROOT = '/media/'
 
 LOGIN_URL = "/signin/"
 
 # Authentication
-AUTH_USER_MODEL = "leapkit_users.CustomUser"
+AUTH_USER_MODEL = "custom_users.CustomUser"
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
-#AUTHENTICATION_BACKENDS = ("leapkit_users.backends.CustomUserAuth",)
+# AUTHENTICATION_BACKENDS = ("custom_users.backends.CustomUserAuth",)
 

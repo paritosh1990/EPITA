@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-from leapkit_users.models import CustomUser
+from django.conf import settings
 
 
 class CompanyProfile(models.Model):
-    user = models.OneToOneField(CustomUser)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
 
