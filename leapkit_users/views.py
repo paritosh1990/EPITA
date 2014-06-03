@@ -22,14 +22,16 @@ def auth_view(request):
         auth.login(request, user)
 
         #Check to see if user is a student, if so, go to student profile page
-        is_student = user.groups.all().filter(name="Students")
-        if is_student:
+        if user.user_type == "STU":
             return HttpResponseRedirect('/students/')
 
         #Check to see if user is a company, if so, go to company profile page
-        is_company = user.groups.all().filter(name="Companies")
-        if is_company:
+        if user.user_type == "COM":
             return HttpResponseRedirect('/companies/')
+
+        #Check to see if user is staff, if so, go to the admin page
+        if user.user_type == "STA":
+            return HttpResponseRedirect('/admin/')
 
         return HttpResponseRedirect('404')
     else:
