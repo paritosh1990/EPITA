@@ -30,7 +30,7 @@ class StudentProfile(models.Model):
 
     # Student fields
     user = models.OneToOneField(CustomUser)
-    date_of_birth = models.DateField(blank=True)
+    date_of_birth = models.DateField(null=True)
     first_name = models.CharField(max_length=100, blank=True)
     last_name = models.CharField(max_length=100, blank=True)
     sex = models.CharField(max_length=3, choices=SEX, blank=True)
