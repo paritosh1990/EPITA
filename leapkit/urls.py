@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from root import views
-from users import views as user_view
+import leapkit_users.views as user_view
 
 admin.autodiscover()
 

@@ -49,7 +49,7 @@ LOCAL_APPS = (
     'companies',
     'students',
     'projects',
-    'users',
+    'leapkit_users',
 )
 
 
@@ -141,6 +141,7 @@ MEDIA_ROOT = '/media/'
 LOGIN_URL = "/signin/"
 
 # Authentication
-AUTH_USER_MODEL = "users.CustomUser"
-AUTHENTICATION_BACKENDS = ("users.backends.CustomUserAuth",)
+AUTH_USER_MODEL = "leapkit_users.CustomUser"
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
+#AUTHENTICATION_BACKENDS = ("leapkit_users.backends.CustomUserAuth",)
 

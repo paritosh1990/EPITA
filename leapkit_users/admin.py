@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from .models import CustomUser
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 
+
 class CustomUserAdmin(UserAdmin):
     # The forms to add and change user instances
 
@@ -13,7 +14,7 @@ class CustomUserAdmin(UserAdmin):
     # that reference the removed 'username' field
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal info'), {'fields': ('first_name', 'last_name')}),
+        (_('Personal info'), {'fields': ('name', 'user_type')}),
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
                                        'groups', 'user_permissions')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
@@ -21,13 +22,14 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2')}
+            'fields': ('email', 'user_type', 'password1', 'password2')}
         ),
     )
+    list_filter = ('user_type',)
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm
-    list_display = ('email', 'first_name', 'last_name', 'is_staff')
-    search_fields = ('email', 'first_name', 'last_name')
+    list_display = ('email', 'user_type')
+    search_fields = ('email', )
     ordering = ('email',)
 
 admin.site.register(CustomUser, CustomUserAdmin)
