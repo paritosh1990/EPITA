@@ -106,16 +106,15 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
         """
         :return: First name + last name, with a space in between
         """
-        full_name = "%s %s" % (self.first_name, self.last_name)
-        return full_name.strip()
+        return self.name
 
     def get_short_name(self):
         """
-        :return: Username
+        :return: name
         """
         return self.name
 
-
+    # TODO implement a way to lead directly to the users profile via. the get_absolute_url
     @models.permalink
     def get_absolute_url(self):
         if self.user_type == "STU":
@@ -133,13 +132,13 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
 
         super(CustomUser, self).save(*args, **kwargs)
 
-
-def email_user(self, subject, message, from_email=None):
-    """
-        This method is used to make it easy to communicate with all users via mail
-        :param subject: The subject of the email
-        :param message: The message intended for the user
-        :param from_email: An email to which the user can reply to.
-        :return: Nothing
+    # TODO Implement the email functionality
+    def email_user(self, subject, message, from_email=None):
         """
-    send_mail(subject=subject, message=message, from_email=from_email, recipient_list=[self.email])
+            This method is used to make it easy to communicate with all users via mail
+            :param subject: The subject of the email
+            :param message: The message intended for the user
+            :param from_email: An email to which the user can reply to.
+            :return: Nothing
+            """
+        send_mail(subject=subject, message=message, from_email=from_email, recipient_list=[self.email])
