@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView, FormView
+from django.contrib.auth import authenticate, login
+from django.views.generic import TemplateView, FormView, CreateView
 
 from braces.views import LoginRequiredMixin, GroupRequiredMixin
 
@@ -11,13 +12,14 @@ class CompanyProfileView(LoginRequiredMixin, GroupRequiredMixin, TemplateView):
     login_url = "companies:sign_up"
 
 
-class SignUpView(FormView):
+class SignUpView(CreateView):
     template_name = "company_signup.html"
     form_class = CompanyCreationForm
-    success_url = "companies:profile"
+    success_url = "/companies/"
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
         form.save()
+        user = authenticate(username=self.request.POST['email'],
+                            password=self.request.POST['password1'])
+        login(self.request, user)
         return super(SignUpView, self).form_valid(form)
