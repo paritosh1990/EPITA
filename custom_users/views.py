@@ -19,6 +19,12 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect(user.get_absolute_url())
+
+        if user.user_type == "STU":
+            return HttpResponseRedirect('/students/')
+        elif user.user_type == "COM":
+            return HttpResponseRedirect('/companies/')
+        else:
+            return HttpResponseRedirect('/admin/')
     else:
         return HttpResponseRedirect('leapkit:home')

@@ -36,6 +36,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 DJANGO_APPS = (
+    'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,6 +62,7 @@ THIRD_PARTY_APPS = (
     'braces',
     'floppyforms',
     'debug_toolbar',
+    'static_precompiler',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -129,7 +132,6 @@ STATICFILES_DIRS = (
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 
 LOGIN_URL = "/signin/"
 

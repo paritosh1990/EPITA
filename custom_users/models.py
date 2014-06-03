@@ -119,9 +119,9 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
     @models.permalink
     def get_absolute_url(self):
         if self.user_type == "STU":
-            return "students:profile", (), {"user": self.id}
+            return "students:profile"
         elif self.user_type == "COM":
-            return "companies:profile", (), {"user": self.id}
+            return "companies:profile"
         else:
             return "/admin/"
 

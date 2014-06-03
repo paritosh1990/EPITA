@@ -13,3 +13,5 @@ django-braces==1.4.0
 django-crispy-forms==1.4.0
 django-haystack==2.1.0
 django-debug-toolbar==1.2.1
+django-admin-bootstrapped==1.6.5
+django-static-precompiler==0.5.3
