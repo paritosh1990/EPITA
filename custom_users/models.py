@@ -91,7 +91,7 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
     slug = models.SlugField(max_length=255, blank=True, default='')
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['user_type', ]
+    REQUIRED_FIELDS = ['user_type', 'name']
 
     objects = CustomUserManager()
 
@@ -110,9 +110,13 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
 
     def get_short_name(self):
         """
-        :return: name
+        :return: email
         """
-        return self.name
+        return self.email
+
+    # TODO implement the unique_slugify so the slug can be used as user url.
+    def unique_slugify(self):
+        pass
 
     # TODO implement a way to lead directly to the users profile via. the get_absolute_url
     @models.permalink
@@ -125,8 +129,6 @@ class CustomUser(PermissionsMixin, AbstractBaseUser):
             return "/admin/"
 
     def save(self, *args, **kwargs):
-        if not self.name:
-            self.name = self.email
         if not self.slug:
             self.slug = slugify(self.name)
 

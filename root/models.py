@@ -55,8 +55,8 @@ class UserQuery(TimeStampedModel):
     name = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
     body = models.TextField()
-    has_been_answered = models.BooleanField(blank=True, default=False)
-    answer = models.TextField(blank=True, default='')
+    has_been_answered = models.BooleanField(default=False)
+    answer = models.TextField(default='')
 
     def __unicode__(self):
         return self.name
