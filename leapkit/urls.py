@@ -33,6 +33,8 @@ urlpatterns = patterns('',
                        # All other URLs are stored in their respective app.
                        url(r'^students/', include('students.urls', namespace="students")),
                        url(r'^companies/', include('companies.urls', namespace="companies")),
+                       url(r'^projects/', include('projects.urls', namespace="projects")),
+
                        url(r'^admin/', include(admin.site.urls)),
 ) + static(
     settings.STATIC_URL,

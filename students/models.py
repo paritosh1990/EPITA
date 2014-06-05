@@ -3,25 +3,20 @@ from django.db import models
 from custom_users.models import CustomUser
 
 
+class University(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=250)
+    number_of_students = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return self.name
+
+
 class StudentProfile(models.Model):
     # Instantiating options
-    KU = "KU"
-    CBS = "CBS"
-    DTU = "DTU"
-    ITU = "ITU"
-    KEA = "KEA"
 
     MALE = "M"
     FEMALE = "F"
-
-    # Instantiating choice fields
-    UNIVERSITIES = {
-        (KU, "Copenhagen University"),
-        (CBS, "Copenhagen Business School"),
-        (DTU, "Danish Technical University"),
-        (ITU, "IT-Universitetet"),
-        (KEA, "Copenhagen School of Design and Technology"),
-    }
 
     SEX = {
         (MALE, "Male"),
@@ -34,7 +29,8 @@ class StudentProfile(models.Model):
     first_name = models.CharField(max_length=100, blank=True)
     last_name = models.CharField(max_length=100, blank=True)
     sex = models.CharField(max_length=3, choices=SEX, blank=True)
-    university = models.CharField(max_length=3, choices=UNIVERSITIES, blank=True)
+    university = models.ForeignKey(University)
+    description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
@@ -57,3 +53,4 @@ class StudentProfile(models.Model):
         # self.user.save()
 
         super(StudentProfile, self).save(*args, **kwargs)
+
